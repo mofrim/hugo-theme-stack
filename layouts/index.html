@@ -4,6 +4,8 @@
     {{ $filtered := ($pages | intersect $notHidden) }}
     {{ $pag := .Paginate ($filtered) }}
 
+    <h1 class='article-title' style='text-align: center;'>Willkommen bei der Göttinger Linux User Group!</h1>
+
     <section class="article-list">
         {{ range $index, $element := $pag.Pages }}
             {{ partial "article-list/default" . }}
