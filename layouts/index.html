@@ -5,6 +5,11 @@
     {{ $pag := .Paginate ($filtered) }}
 
     <h1 class='article-title' style='text-align: center;'>Willkommen bei der Göttinger Linux User Group!</h1>
+    <p style="color: var(--card-text-color-main); text-align: center; "> 
+      Auf dieser Seite findet ihr alle Neuigkeiten um die und von der Linux und
+      FreeSoftware Bewegung in Göttingen. Bis wir diese Seite mit Content gefüllt haben können wir auch wärmstens unsere
+      <a href="/links/">Links</a> empfehlen 🐧
+    </p>
 
     <section class="article-list">
         {{ range $index, $element := $pag.Pages }}
