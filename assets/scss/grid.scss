@@ -79,8 +79,7 @@
 main.main {
   order: -2;
   min-width: 0;
-  // this was me..
-  max-width: 70%;
+  max-width: 100%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -88,6 +87,14 @@ main.main {
 
   @include respond(md) {
     padding-top: var(--main-top-padding);
+  }
+
+  // @goelug
+  // the `respond(..)` applies to screens _larger_ then the specified
+  // breakpoint. so in order to have full-width on smaller displays one has to
+  // use `max-width: 100%` as the default and reduce width for wider displays.
+  @include respond(lg) {
+    max-width: 70%;
   }
 }
 
